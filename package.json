@@ -1,18 +1,18 @@
 {
-  "name": "ts-starter",
+  "name": "@oiij/tiptap",
   "type": "module",
   "version": "0.0.1",
-  "description": "A starter template for TypeScript projects",
+  "description": "A Vue Composable for Tiptap",
   "author": "oiij",
   "license": "MIT",
-  "homepage": "https://github.com/oiij/ts-starter",
+  "homepage": "https://github.com/oiij/tiptap",
   "repository": {
     "type": "git",
-    "url": "git@github.com:oiij/ts-starter.git"
+    "url": "git@github.com:oiij/tiptap.git"
   },
-  "bugs": "https://github.com/oiij/ts-starter/issues",
+  "bugs": "https://github.com/oiij/tiptap/issues",
   "keywords": [
-    "ts-starter"
+    "tiptap"
   ],
   "sideEffects": false,
   "exports": {
@@ -47,8 +47,14 @@
     "cz": "czg",
     "commit": "git pull && git add -A && pnpm cz && git push",
     "link": "pnpm link --global",
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "npx simple-git-hooks"
+    "preinstall": "npx only-allow pnpm"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^2.11.7",
+    "@tiptap/pm": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
+    "@vueuse/core": "^13.1.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
@@ -67,7 +73,12 @@
     "taze": "^19.0.4",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
+    "vitest": "^3.1.2",
+    "@tiptap/core": "^2.11.7",
+    "@tiptap/pm": "^2.11.7",
+    "@tiptap/starter-kit": "^2.11.7",
+    "@vueuse/core": "^13.1.0",
+    "vue": "^3.5.13"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged && pnpm type:check"
